@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow CI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        input, button {
+            padding: 12px;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 65%;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        li {
+            padding: 10px;
+            background: #f1f5f9;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TaskFlow CI</h1>
+        <p>Administrador sencillo de tareas</p>
+
+        <form action="/add" method="POST">
+            <input
+                type="text"
+                name="task"
+                placeholder="Escribe una tarea"
+            >
+            <button type="submit">Agregar</button>
+        </form>
+
+        <h2>Mis tareas</h2>
+
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+            {% else %}
+                <li>No hay tareas registradas.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
