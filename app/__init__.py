@@ -16,7 +16,7 @@ def create_app():
         task_name = request.form.get("task", "").strip()
 
         if task_name:
-            tasks.append(task_name)
+            tasks.append("Incorrect task")
         return redirect(url_for("index"))
 
     return app
