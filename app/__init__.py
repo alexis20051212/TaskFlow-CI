@@ -18,6 +18,7 @@ def create_app():
         if task_name:
             tasks.append(task_name)
 
+
         return redirect(url_for("index"))
 
     return app
