@@ -51,4 +51,4 @@ python -m pytest -v
 ## Continuous Integration
 
 GitHub Actions automatically installs the dependencies
-and runs the tests when changes are pushed to the repository.
+and runs the tests when changes are pushed to the repository
